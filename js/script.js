@@ -6,10 +6,16 @@
 
 // Document Ready Function. All of your jQuery should go in here. 
 $( document ).ready(function() {
-  
-
-
-
+$("button").click(function(){
+var response =$("#answer").val();	
+var pigMessage= ay(response);
+$("#result").text(pigMessage);	
+});
+function ay(word) { 
+ return word + "ay" ;
+ } 
+ 
+ 
 });
 
 
