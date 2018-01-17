@@ -5,17 +5,34 @@
 // CREATE THE FUNCTIONS BELOW
 
 // Document Ready Function. All of your jQuery should go in here. 
-$( document ).ready(function() {
-$("button").click(function(){
-var response =$("#answer").val();	
-var pigMessage= ay(response);
-$("#result").text(pigMessage);	
-});
-function ay(word) { 
- return word + "ay" ;
- } 
- 
- 
+$(document).ready(function() {
+ $("#button").click(function() {
+  var response = $("#answer").val();
+  var pigMessage = sentenceToPigLatin(response);
+  $("#result").text(pigMessage);
+ });
+  function isVowelFirstLetter(word) {
+   var last=response.slice(0, 1);
+   var vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
+   for (i = 0; i < vowels.length; i = i + 1) {
+    if (vowels[i] === word[0]) {
+     return true;
+    }
+   }
+   return false;
+  }
+  
+  
+ function sentenceToPigLatin(words) {
+  if (isVowelFirstLetter(words[0])) {
+  return  words[0] + "ay";
+  }
+  else {
+  return words.slice(word.length-1);
+  }
+ }
+
+
 });
 
 
@@ -27,7 +44,5 @@ function ay(word) {
 
 
 // Create the sentenceToPigLatin function that takes a sentence as a parameter
-	//Loops through all the words in the sentence and transforms each word
-	//It should return a transfromed sentance
-
-
+//Loops through all the words in the sentence and transforms each word
+//It should return a transfromed sentance

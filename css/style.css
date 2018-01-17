@@ -5,6 +5,10 @@ body {
     background-color:pink;
 }
 #result {
-    color: blue;
+    color: green;
     font-size:35px;
+}
+img {
+    height:100px;
+    width:100px;
 }
